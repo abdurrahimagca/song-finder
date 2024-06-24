@@ -1,0 +1,96 @@
+:root {
+    --main-background-color: #2F2F2F;
+    --input-background-color: #FFFFFF;
+    --button-background-color: #09B558;
+    --suggestions-background-color: #FFFFFF;
+    --suggestions-text-color: #000000;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background-color);
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-container input,
+.input-container button {
+    box-sizing: border-box;
+    height: 38px; /* Ensure both input and button have the same height */
+    padding: 10px; /* Adjust padding to maintain consistency */
+}
+
+.input-container input {
+    background-color: var(--input-background-color);
+    border: none;
+ 
+    border-bottom-left-radius: 15px;
+    font-size: 16px;
+    width: 300px;
+}
+
+.input-container button {
+    background-color: var(--button-background-color);
+    color: #FFFFFF;
+    border: none;
+    border-top-right-radius: 15px;
+  
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 18px; /* Adjust to vertically center text */
+}
+
+.input-container input:focus {
+    outline: none;
+}
+
+.input-container button:focus {
+    outline: none;
+}
+
+.suggestions-container {
+    background-color: var(--suggestions-background-color);
+    border-radius: 5px;
+    position: absolute;
+    top: 50px; /* Adjust this value based on your input's height */
+    width: calc(100% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 200px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.suggestions-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.suggestions-container li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    color: var(--suggestions-text-color);
+}
+
+.suggestions-container li:hover {
+    background-color: var(--button-background-color);
+    border-radius: 15px;
+}
