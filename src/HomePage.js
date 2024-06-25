@@ -40,7 +40,7 @@ const[selectedSongID,setSelectedSongID] = useState("");
 
   const handleNavigate = () => {
     if(selected){
-    navigate('/newpage', { state: { data: selectedSongID, secdata : accessToken } });
+    navigate('/Results', { state: { songId: selectedSongID, token : accessToken } });
     }
     else{
         console.log("provide a selection");

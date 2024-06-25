@@ -4,14 +4,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './HomePage';
-import NewPage from './NewPage';
+
+import Results from './Results';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/newpage" element={<NewPage />} />
+        <Route path="/Results" element={<Results />} />
       </Routes>
     </Router>
   );
