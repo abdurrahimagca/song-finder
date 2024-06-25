@@ -12,11 +12,11 @@
     align-items: center;
     width: 48%;
     margin-bottom: 20px;
-    background-color: white;
+   
     color: black;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
   }
   
   .container-for-songs img {
